@@ -13,7 +13,7 @@ class NavigationBar extends StatelessWidget {
           SizedBox(
             height: 80,
             width: 150,
-            child: Image.asset('assets/icons/cat.png'),
+            child: Image.asset('assets/icons/marioblock.gif'),
           ),
 
           Row(

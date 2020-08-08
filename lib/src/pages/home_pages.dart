@@ -21,13 +21,10 @@ class _HomePageState extends State<HomePage> {
             NavigationBar(),
             Expanded(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget> [
                   CourseDetails(),
-                  Expanded(
-                    child: Center(
-                      child: CallToAction(),
-                    ),
-                  ),
+                  CallToAction(),
                 ],
               ),
             )
