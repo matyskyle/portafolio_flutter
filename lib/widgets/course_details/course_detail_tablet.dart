@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CourseDetailsDesktop extends StatelessWidget {
-  const CourseDetailsDesktop({Key key}) : super(key: key);
+class CourseDetailsTablet extends StatelessWidget {
+  const CourseDetailsTablet({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width/2.5,
+      width: 700,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,

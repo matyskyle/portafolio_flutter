@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portafolio_flutter/widgets/call_to_action/call_to_action.dart';
 import 'package:portafolio_flutter/widgets/course_details/course_details.dart';
 
 class HomeMobilePage extends StatelessWidget {
@@ -7,14 +6,26 @@ class HomeMobilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CourseDetails(),
-          SizedBox(height: 100,),
-          CallToAction(),
+          Center(
+            child: Image.asset('assets/images/developer-draw.png', 
+            height: 300, 
+            width: 300,
+            ),
+          ),
+          CourseDetails(),
+          Center(
+            child: Image.asset('assets/images/developer-draw.png', 
+            height: 300, 
+            width: 300,
+            ),
+          ),
+          CourseDetails(),
         ],
       ),
     );

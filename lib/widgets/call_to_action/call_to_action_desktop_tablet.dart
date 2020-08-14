@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
 
+import 'package:portafolio_flutter/constants/app_colors.dart';
+
 
 class CallToActionTabletDesktop extends StatelessWidget {
   const CallToActionTabletDesktop({Key key}) : super(key: key);
@@ -8,10 +10,10 @@ class CallToActionTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width/4,
+      width: 500,
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child:  _webContactIcons(),
-      decoration: BoxDecoration(color: Color.fromARGB(255, 31, 229, 146),
+      decoration: BoxDecoration(color: barColor,
       borderRadius: BorderRadius.circular(5)),
     );
   }

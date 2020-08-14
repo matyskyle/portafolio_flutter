@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio_flutter/src/pages/home_desktop_pages.dart';
 import 'package:portafolio_flutter/src/pages/home_mobile_page.dart';
+import 'package:portafolio_flutter/src/pages/home_tablet_page.dart';
+import 'package:portafolio_flutter/widgets/call_to_action/call_to_action.dart';
+//import 'package:portafolio_flutter/widgets/call_to_action/call_to_action_mobile.dart';
 import 'package:portafolio_flutter/widgets/centered_view/centered_view.dart';
 import 'package:portafolio_flutter/widgets/navigation_bar/navigation_bar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -23,9 +26,12 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: ScreenTypeLayout(
                 mobile: HomeMobilePage(),
+                tablet: HomeTabletPage(),
                 desktop: HomeDesktopPage(),
               ),
-            )
+            ),
+            SizedBox(height: 20,),
+            CallToAction(),
           ],
         ),
       ),
