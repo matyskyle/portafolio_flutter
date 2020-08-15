@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             NavigationBar(),
+            SizedBox(height: 3,),
             Expanded(
               child: ScreenTypeLayout(
                 mobile: HomeMobilePage(),
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                 desktop: HomeDesktopPage(),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 3,),
             CallToAction(),
           ],
         ),
