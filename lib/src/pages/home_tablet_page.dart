@@ -13,7 +13,7 @@ class HomeTabletPage extends StatelessWidget {
         children: <Widget>[
           CourseDetails(),
           Center(
-            child: Image.asset('assets/images/developer-draw.png', 
+            child: Image.asset('assets/images/technological-draw.png', 
             height: 500, 
             width:  500,
             ),
@@ -27,7 +27,7 @@ class HomeTabletPage extends StatelessWidget {
           ),
           CourseDetails(),
           Center(
-            child: Image.asset('assets/images/developer-draw.png', 
+            child: Image.asset('assets/images/technological-draw.png', 
             height: 500, 
             width:  500,
             ),

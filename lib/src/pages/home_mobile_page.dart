@@ -13,7 +13,7 @@ class HomeMobilePage extends StatelessWidget {
         children: <Widget>[
           CourseDetails(),
           Center(
-            child: Image.asset('assets/images/developer-draw.png', 
+            child: Image.asset('assets/images/technological-draw.png', 
             height: 300, 
             width: 300,
             ),

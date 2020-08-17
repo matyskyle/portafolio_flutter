@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_flutter/src/pages/contact_pages.dart';
 import 'dart:html' as html;
 import 'package:portafolio_flutter/widgets/navigation_bar/navbar_logo_mobile.dart';
 
@@ -22,7 +23,7 @@ class NavigationBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           NavBarLogoMobile(),
-          _webContactIcons(),
+          _webContactIcons(context),
 
         ],
       ),
@@ -30,7 +31,7 @@ class NavigationBarMobile extends StatelessWidget {
   }
 }
 
-Widget _webContactIcons(){
+Widget _webContactIcons(BuildContext context){
   final double iconSize = 20;
   final double textSize = 8;
   return Row(
@@ -67,7 +68,7 @@ Widget _webContactIcons(){
       SizedBox(width: 10,),
 
       InkWell(
-        onTap: () => html.window.open('https://stackoverflow.com/story/matyskyle','Stackoverflow'),
+        onTap: () => ContactPages(context),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

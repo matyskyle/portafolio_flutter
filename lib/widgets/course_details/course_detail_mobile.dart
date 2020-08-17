@@ -11,14 +11,26 @@ class CourseDetailsMobile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'MI INFORMACIÓN',
-            style: TextStyle(fontWeight: FontWeight.w800, height: 0.9, fontSize: 35),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 0,
+                child: Text(
+                  'MI PORTAFOLIO\nPERSONAL',
+                  style: TextStyle(fontWeight: FontWeight.w900, height: 0.9,fontSize: MediaQuery.of(context).size.width/12),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Image.asset('assets/icons/flutter.png', 
+              width: MediaQuery.of(context).size.width/6, 
+              height: MediaQuery.of(context).size.width/6,),
+            ],
           ),
-          SizedBox(height: 50,),
-          Text(
+          SizedBox(height: 30,),
+          SelectableText(
           'Actualmente mi objetivo profesional es ser capaz de brindar y llevar a cabo soluciones informáticas que mejoren la sociedad actual, optimizando la vida de la gente y/o actualizar procesos considerados como “obsoletos”. Mis fortalezas son la perseverancia, positivismo, trabajo en equipo, creatividad y adaptabilidad. Me considero una persona de mente amplia, con disposición a desarrollar diversas tareas referentes a mi área profesional y desarrollarme por medio de la adquisición de experiencia para mejorar como profesional.',
-          style: TextStyle(fontSize: 12, height: 1.4, ), 
+          style: TextStyle(fontSize: 14, height: 1.4, ), 
           textAlign: TextAlign.justify,
           textDirection: TextDirection.ltr,
           ),

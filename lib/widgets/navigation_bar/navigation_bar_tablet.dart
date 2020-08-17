@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portafolio_flutter/widgets/navigation_bar/navbar_item.dart';
+import 'package:portafolio_flutter/src/pages/contact_pages.dart';
 import 'package:portafolio_flutter/widgets/navigation_bar/navbar_logo.dart';
 
 class NavigationBarTablet extends StatelessWidget {
@@ -14,22 +14,37 @@ class NavigationBarTablet extends StatelessWidget {
         children: <Widget>[
           NavBarLogo(),
 
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              NavBarItem('About'),
-              SizedBox(
-                width: 60,
-              ),
-              NavBarItem('Proyects'),
-              SizedBox(
-                width: 60,
-              ),
-              NavBarItem('Contact'),
-            ],
-          )
+          _contenido(context,'About','Projects','Contact Me')
         ],
        ),
     );
   }
 }
+
+Widget _contenido(BuildContext context, String title1, String title2, String title3) {
+    final double textSize = 18;
+
+    return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget> [
+      InkWell(
+        onTap: () => '',
+        child: Text(title1, style: TextStyle(fontWeight: FontWeight.w400, fontSize: textSize)),
+      ),
+
+      SizedBox(width: 30,),
+
+      InkWell(
+        onTap: () => '',
+        child: Text(title2, style: TextStyle(fontWeight: FontWeight.w400, fontSize: textSize)),
+      ),
+
+      SizedBox(width: 30,),
+
+      InkWell(
+        onTap: () => ContactPages(context),
+        child: Text(title3, style: TextStyle(fontWeight: FontWeight.w400, fontSize: textSize)),
+      ),
+    ],
+  );
+  }

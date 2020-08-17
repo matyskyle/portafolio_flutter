@@ -18,14 +18,13 @@ class MyApp extends StatelessWidget {
       },
 
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
       ),
       darkTheme: ThemeData(
         colorScheme: const ColorScheme.dark()
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
     );
   }
 }
