@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portafolio_flutter/widgets/call_to_action/call_to_action_desktop_tablet.dart';
 import 'package:portafolio_flutter/widgets/call_to_action/call_to_action_mobile.dart';
 import 'package:portafolio_flutter/widgets/call_to_action/call_to_action_tablet.dart';
 //import 'package:imagebutton/imagebutton.dart';import 'package:flutter/gestures.dart';
@@ -15,7 +14,9 @@ class CallToAction extends StatelessWidget {
     return ScreenTypeLayout(
       mobile:  CallToActionMobile(),
       tablet:  CallToActionTablet(),
-      desktop: CallToActionTabletDesktop(),
+      desktop: Text('Design by Matias Cabrera 2020',
+              style: TextStyle(fontSize: 9),
+              textAlign: TextAlign.end,),
     );
   }
 }

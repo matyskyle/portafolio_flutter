@@ -38,7 +38,7 @@ Widget _webContactIcons(BuildContext context){
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget> [
       InkWell(
-        onTap: () => html.window.open('https://www.linkedin.com/in/mati%C3%A1s-cabrera-herrera-277786170/','Linkedin'),
+        onTap: () => Navigator.pushNamed(context, 'first'),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +53,7 @@ Widget _webContactIcons(BuildContext context){
       SizedBox(width: 10,),
 
       InkWell(
-        onTap: () => html.window.open('https://github.com/matyskyle','Github'),
+        onTap: () => Navigator.pushNamed(context, 'projects'),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

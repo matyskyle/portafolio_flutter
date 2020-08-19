@@ -12,8 +12,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^0.1.3
+  email_validator: '^1.0.0'
+  font_awesome_flutter: ^8.8.1
   imagebutton: ^0.0.6
   responsive_builder: ^0.2.0+2
+  material_design_icons_flutter: ^4.0.5345
   http: ^0.12.1
 
 dev_dependencies:
@@ -49,6 +52,22 @@ flutter:
           weight: 800
         - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 400
+    - family: Oxygen
+      fonts:
+        - asset: assets/fonts/Oxygen-Regular.ttf
+        - asset: assets/fonts/Oxygen-Bold.ttf
+          weight: 700
+    - family: IBM
+      fonts:
+        - asset: assets/fonts/IBMPlexMono-Bold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+    - family:  MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

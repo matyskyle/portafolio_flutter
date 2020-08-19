@@ -11,7 +11,7 @@ class NavBarLogoMobile extends StatelessWidget {
           Image.asset('assets/icons/marioblock.gif', height: imageSize, width: imageSize,),
           Container(
             child: Text('MATIAS\nPORTAFOLIO', 
-                   style: TextStyle(fontWeight: FontWeight.w600, height: 0.9, fontSize: 13),),
+                   style: TextStyle(fontWeight: FontWeight.w600, height: 1.3, fontSize: 13),),
           )
         ],
       ),

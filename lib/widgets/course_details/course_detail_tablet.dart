@@ -6,7 +6,7 @@ class CourseDetailsTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 900,
+      width: MediaQuery.of(context).size.width-40,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,

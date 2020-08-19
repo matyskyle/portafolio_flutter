@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio_flutter/src/pages/home_pages.dart';
+import 'package:portafolio_flutter/src/pages/projects/projects_pages.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
 
       initialRoute: 'first',
       routes: {
-        'first' : (BuildContext context) => HomePage(),
+        'first'    : (BuildContext context) => HomePage(),
+        'projects' : (BuildContext context) => ProjectsPages(),
       },
 
       theme: ThemeData(

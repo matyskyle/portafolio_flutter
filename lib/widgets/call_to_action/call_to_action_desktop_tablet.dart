@@ -10,7 +10,7 @@ class CallToActionTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
+      width: 380,
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child:  _webContactIcons(),
       decoration: BoxDecoration(color: barColor,
@@ -20,7 +20,7 @@ class CallToActionTabletDesktop extends StatelessWidget {
 }
 
 Widget _webContactIcons(){
-  final double iconSize = 40;
+  final double iconSize = 20;
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget> [
@@ -29,14 +29,14 @@ Widget _webContactIcons(){
         child: Image.asset('assets/icons/linkedin.png', height: iconSize, width: iconSize,),
       ),
 
-      SizedBox(width: 20,),
+      SizedBox(width: 40,),
 
       InkWell(
         onTap: () => html.window.open('https://github.com/matyskyle','Github'),
         child: Image.asset('assets/icons/github.png', height: iconSize, width: iconSize,),
       ),
 
-      SizedBox(width: 20,),
+      SizedBox(width: 40,),
 
       InkWell(
         onTap: () => html.window.open('https://stackoverflow.com/story/matyskyle','Stackoverflow'),

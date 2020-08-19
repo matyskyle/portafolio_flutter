@@ -28,14 +28,14 @@ Widget _contenido(BuildContext context, String title1, String title2, String tit
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget> [
       InkWell(
-        onTap: () => '',
+        onTap: () => Navigator.pushNamed(context, 'first'),
         child: Text(title1, style: TextStyle(fontWeight: FontWeight.w400, fontSize: textSize)),
       ),
 
       SizedBox(width: 30,),
 
       InkWell(
-        onTap: () => '',
+        onTap: () => Navigator.pushNamed(context, 'projects'),
         child: Text(title2, style: TextStyle(fontWeight: FontWeight.w400, fontSize: textSize)),
       ),
 
