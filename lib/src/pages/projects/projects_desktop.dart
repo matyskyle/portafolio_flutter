@@ -18,7 +18,7 @@ class ProjectsDesktop extends StatelessWidget {
               Container(
                 width: 300,
                 height: 550,
-                child: HomePage(),
+                child: WeatherApp(),
               ),
             ],
           ),
@@ -32,7 +32,7 @@ class ProjectsDesktop extends StatelessWidget {
               Container(
                 width: 300,
                 height: 550,
-                child: HomePage(),
+                child: WeatherApp(),
               ),
             ],
           ),
@@ -46,7 +46,7 @@ class ProjectsDesktop extends StatelessWidget {
               Container(
                 width: 300,
                 height: 550,
-                child: HomePage(),
+                child: WeatherApp(),
               ),
             ],
           ),

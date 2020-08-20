@@ -49,7 +49,7 @@ Widget _weatherApp(){
       Container(
         width: 300,
         height: 550,
-        child: HomePage(),
+        child: WeatherApp(),
       ),
     ],
   );

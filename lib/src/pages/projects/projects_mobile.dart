@@ -32,7 +32,7 @@ Widget _weatherApp(){
       Container(
         width: 300,
         height: 500,
-        child: HomePage(),
+        child: WeatherApp(),
       ),
     ],
   );
