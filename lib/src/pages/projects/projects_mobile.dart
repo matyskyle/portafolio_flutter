@@ -7,8 +7,7 @@ class ProjectMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Expanded(
-        child: Column(
+      child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _weatherApp(),
@@ -18,22 +17,17 @@ class ProjectMobile extends StatelessWidget {
             _weatherApp(),
           ],
         ),
-      )
     );
   }
 }
 
 Widget _weatherApp(){
-
   return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Text('Weather UI', style: TextStyle( fontSize: 14, fontWeight: FontWeight.w600)),
       SizedBox(height: 20,),
-      Container(
-        width: 300,
-        height: 500,
-        child: WeatherApp(),
-      ),
-    ],
+      WeatherApp(),
+    ]
   );
 }

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:portafolio_flutter/src/pages/home_pages.dart';
 import 'package:portafolio_flutter/src/pages/projects/projects_pages.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() async => {
+  WidgetsFlutterBinding.ensureInitialized(),
+
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp]
+  ), runApp(MyApp())
+};
 
 class MyApp extends StatelessWidget {
   @override

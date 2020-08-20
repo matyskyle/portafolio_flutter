@@ -10,47 +10,9 @@ class ProjectsDesktop extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget> [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Weather UI', style: TextStyle( fontSize: 14, fontWeight: FontWeight.w600)),
-              SizedBox(height: 20,),
-              Container(
-                width: 300,
-                height: 550,
-                child: WeatherApp(),
-              ),
-            ],
-          ),
-
-          
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Weather UI', style: TextStyle( fontSize: 14, fontWeight: FontWeight.w600)),
-              SizedBox(height: 20,),
-              Container(
-                width: 300,
-                height: 550,
-                child: WeatherApp(),
-              ),
-            ],
-          ),
-
-          
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Weather UI', style: TextStyle( fontSize: 14, fontWeight: FontWeight.w600)),
-              SizedBox(height: 20,),
-              Container(
-                width: 300,
-                height: 550,
-                child: WeatherApp(),
-              ),
-            ],
-          ),
-
+          _projectExamples(),
+          _projectExamples(),
+          _projectExamples(),
           // SafeArea(
           //   child: Container(
           //     width: MediaQuery.of(context).size.width/2.3,
@@ -66,4 +28,15 @@ class ProjectsDesktop extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _projectExamples(){
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text('Weather UI', style: TextStyle( fontSize: 14, fontWeight: FontWeight.w600)),
+      SizedBox(height: 20,),
+      WeatherApp(),
+    ],
+  );
 }

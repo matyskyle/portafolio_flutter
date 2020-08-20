@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio_flutter/src/pages/projects/projects_content/weather_app/model/weather.dart';
 
-class WeatherApp extends StatelessWidget {
+class WeatherApp extends StatefulWidget {
   static const _kFontFam = 'MyFlutterApp';
   static const _kFontPkg = null;
 
@@ -10,10 +10,19 @@ class WeatherApp extends StatelessWidget {
   static const IconData cloud_sun = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData sunset = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 
+  @override
+  _WeatherAppState createState() => _WeatherAppState();
+}
+
+class _WeatherAppState extends State<WeatherApp> {
   String temp = '26';
+
   String weather = "S\nU\nN\nN\nY";
+
   Color color = Colors.black;
+
   String background = "assets/images/bg1.png";
+
   String gif = "assets/images/sunny.gif";
 
   List<bool> isSelected = [true, false, false, false, false, false, false];
@@ -108,41 +117,35 @@ class WeatherApp extends StatelessWidget {
           }
         });
       }
-    
+
       @override
       Widget build(BuildContext context) {
-        return Scaffold(
-          body: Container( 
+        return Container( 
+            width: 300,
+            height: 450,
             decoration: BoxDecoration(
               image: DecorationImage(image: AssetImage(background), fit: BoxFit.cover),
             ),
             
             child: SafeArea(
-              child: Stack(
-                children: [
-                  Expanded(
-                    child: Column(
+              child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         _temperatureNow(), //temperatura actual
     
                         Container(
-                          height: MediaQuery.of(context).size.height/3.5,
-                          padding: EdgeInsets.symmetric(vertical: 5),
+                          height: MediaQuery.of(context).size.height/6,
+                          padding: EdgeInsets.symmetric(horizontal: 5),
                           child: Image.asset(gif),
                         ),
     
                         _daysInfo(), //informacion de la temperatura durante la semana
                       ],
-                    ),
                   ),
-                ],
-              ),
             ),
-          ),
-        );
+          );
       }
-    
+
       Widget _temperatureNow() {
         final temperatureText = Container(
                                   child: Text(
@@ -210,11 +213,11 @@ class WeatherApp extends StatelessWidget {
           ),
         );
       }
-    
+
       Widget _daysInfo() {
         final cityName = Text(
                           "TOKYO", style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 25,
                             letterSpacing: 2,
                             fontFamily: "Poopins",
                             color: color,
@@ -261,7 +264,7 @@ class WeatherApp extends StatelessWidget {
           ),
         );
       }
-    
+
       Widget _weatherType(){
         return SafeArea(
             child: Text(
@@ -271,7 +274,7 @@ class WeatherApp extends StatelessWidget {
             ),
           );
       }
-    
+
       Widget weatherDaysIcons(){
         return ToggleButtons(
               constraints: BoxConstraints(minHeight: 28, minWidth: 40),
@@ -279,36 +282,36 @@ class WeatherApp extends StatelessWidget {
               fillColor: Colors.brown.withOpacity(0.4),
               children: [
                 Icon(
-                  sunset,
+                  WeatherApp.sunset,
                   color: color,
                   size: 25
                 ),
                 Icon(
-                  drizzle,
+                  WeatherApp.drizzle,
                   color: color,
                   size: 25
                 ),
                 Icon(
-                  cloud_sun,
+                  WeatherApp.cloud_sun,
                   color: color,
                   size: 25
                 ),
                 Icon(
-                  sun,
+                  WeatherApp.sun,
                   color: color,
                   size: 25
                 ),
                 Icon(
-                  sunset,
+                  WeatherApp.sunset,
                   color: color,
                   size: 25
                 ),
                 Icon(
-                  drizzle,
+                  WeatherApp.drizzle,
                   color: color
                 ),
                 Icon(
-                  cloud_sun,
+                  WeatherApp.cloud_sun,
                   color: color
                 ),
               ],
@@ -319,6 +322,4 @@ class WeatherApp extends StatelessWidget {
               isSelected: isSelected,
             );
       }
-    
-      void setState(Null Function() param0) {}
 }
